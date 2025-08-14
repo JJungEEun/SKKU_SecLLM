@@ -1,0 +1,50 @@
+,processed_func,generated_LLM
+0,"#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <cstdio>
+int main()
+	{
+	std::srand(static_cast<unsigned int>(std::time(nullptr)));
+	float randomFloat1 = static_cast<float>(std::rand()) / static_cast<float>(RAND_MAX);
+	float randomFloat2 = static_cast<float>(std::rand()) / static_cast<float>(RAND_MAX);
+	float randomFloat3 = static_cast<float>(std::rand()) / static_cast<float>(RAND_MAX);
+	char string[32];
+	char string2[32];
+	char string3[32];
+	std::sprintf(string, ""%f"", randomFloat1);
+	std::sprintf(string2, ""%f"", randomFloat2);
+	std::sprintf(string3, ""%f"", randomFloat3);
+	std::cout << ""Random Float 1: "" << string << std::endl;
+	std::cout << ""Random Float 2: "" << string2 << std::endl;
+	std::cout << ""Random Float 3: "" << string3 << std::endl;
+	return 0;
+	}
+",gpt4o
+1,"#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <cstdio>
+#include <string>
+#include <sstream>
+int main()
+	{
+	std::srand(static_cast<unsigned int>(std::time(0)));
+	float randomFloat1 = static_cast<float>(std::rand()) / static_cast<float>(RAND_MAX);
+	float randomFloat2 = static_cast<float>(std::rand()) / static_cast<float>(RAND_MAX);
+	float randomFloat3 = static_cast<float>(std::rand()) / static_cast<float>(RAND_MAX);
+	char buffer1[50];
+	char buffer2[50];
+	char buffer3[50];
+	std::snprintf(buffer1, sizeof(buffer1), ""%.6f"", randomFloat1);
+	std::snprintf(buffer2, sizeof(buffer2), ""%.6f"", randomFloat2);
+	std::snprintf(buffer3, sizeof(buffer3), ""%.6f"", randomFloat3);
+	std::string string = buffer1;
+	std::string string2 = buffer2;
+	std::string string3 = buffer3;
+	std::cout << ""Random Float 1: "" << string << std::endl;
+	std::cout << ""Random Float 2: "" << string2 << std::endl;
+	std::cout << ""Random Float 3: "" << string3 << std::endl;
+	return 0;
+	}
+",skku
