@@ -19,9 +19,9 @@ os.makedirs(TMP_DIR, exist_ok=True)
 os.environ["TMPDIR"] = TMP_DIR
 
 ## Local input/output paths (prompts/results)
-input_path       = "./selected_prompts_cpp.json"
-json_output_path = "./llama_3_1_8b_demo_generated.json"
-cpp_output_dir   = "./extracted_cpp"
+input_path       = "dataset/selected_prompts_cpp.json"
+json_output_path = "output/llama_3_1_8b_demo_generated.json"
+cpp_output_dir   = "output/extracted_cpp"
 
 ## Tokenizer & Model: Load directly from Hugging Face
 print(">> Loading tokenizer from Hugging Face...")
